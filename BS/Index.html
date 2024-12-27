@@ -1,0 +1,421 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty Bank</title>
+    <style>
+        @font-face {
+            font-family: "Liberty";
+            src: url("Fonts/LB-Nu-Regular.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: "LibertyBold";
+            src: url("Fonts/LB-Nu-Bold.otf") format("opentype");
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Liberty", sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F3F2F5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;            
+            width: 100%;
+            max-width: 1200px;
+        }
+
+            .header h1 {
+                font-family: LibertyBold, sans-serif;
+                font-size: 60px;
+                line-height: 30px;
+                padding-top: 100px;
+                color: #474647;
+            }
+
+            .header h2 {
+                color: #197C50;
+                font-size: 22px;
+                font-family: Liberty;
+                padding-top: 30px;
+                padding-bottom:5px;
+            }
+
+            .header p {
+                font-family: Liberty, sans-serif;
+                font-size: 18px;
+                line-height: 30px;                
+                padding-left: 65px;
+                padding-right: 65px;
+                color: #303030;
+            }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;            
+        }
+
+        .section1 {
+            background-color: #ffffff;
+            width: 1061px;
+            height: 294px;
+            margin: 90px 0 90px 0;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left, center;
+            position: relative; /* This is necessary for relative positioning of the images inside it */
+            overflow: visible;
+        }
+
+            .section1 img {                
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                overflow: hidden;
+            }
+            .section1 h2 {
+                font-family: LibertyBold, sans-serif;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 50px;
+                padding-left: 71px;
+                padding-right: 550px; /* Create space on the right to avoid the image */
+                z-index: 1; /* Ensure text is in front of the image */
+            }
+            .section1 p {
+                font-family: Liberty, sans-serif;
+                font-size: 18px;
+                line-height: 28px;
+                padding-top: 10px;
+                padding-left: 71px;
+                padding-bottom: 40px;
+                padding-right: 350px; /* Create space on the right to avoid the image */
+                z-index: 1; /* Ensure text is in front of the image */
+                color: #303030;
+            }
+        /* Positioning the images at different locations */
+        .image1 {
+            width: 285px;
+            height: auto;
+            right: 50px;
+            bottom: 0px;
+        }
+
+        .image2 {
+            width: 85px;
+            height: auto;
+            left: -35px;
+            top: -35px;
+        }
+
+
+        .section2 {
+            background-color: #ffffff;
+            width: 1061px;
+            height: 294px;
+            margin: 20px 0 70px 0;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left, center;
+            position: relative; /* This is necessary for relative positioning of the images inside it */
+            overflow: visible;
+        }
+
+            .section2 img {
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            .section2 h2 {
+                font-family: LibertyBold, sans-serif;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 50px;
+                padding-left: 400px;
+                z-index: 1; /* Ensure text is in front of the image */
+            }
+
+            .section2 p {
+                font-family: Liberty, sans-serif;
+                font-size: 18px;
+                line-height: 28px;
+                padding-right: 20px;
+                padding-top: 10px;
+                padding-left: 400px;
+                padding-bottom: 0px;
+                z-index: 1; /* Ensure text is in front of the image */
+                color: #303030;
+            }
+        /* Positioning the images at different locations */
+        .image3 {
+            width: 320px;
+            height: auto;
+            left: 0px;
+            top: -100px;
+            z-index: 3;
+        }
+
+        .image4 {
+            width: 320px;
+            height: auto;
+            left: 90px;
+            top: 80px;
+            z-index: 2;
+        }
+
+        .section3 {
+            background-color: #ffffff;
+            width: 1061px;
+            height: 268px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: left, center;
+            position: relative; /* This is necessary for relative positioning of the images inside it */
+            overflow: visible;
+        }
+
+            .section3 img {
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            .section3 h2 {
+                font-family: LibertyBold, sans-serif;
+                font-size: 24px;
+                line-height: 28px;
+                padding-top: 30px;
+                padding-left: 71px;
+                padding-right: 550px; /* Create space on the right to avoid the image */
+                z-index: 1; /* Ensure text is in front of the image */
+            }
+
+            .section3 p {
+                font-family: Liberty, sans-serif;
+                font-size: 18px;
+                line-height: 28px;
+                padding-top: 10px;
+                padding-left: 71px;
+                padding-bottom: 40px;
+                padding-right: 390px; /* Create space on the right to avoid the image */
+                z-index: 1; /* Ensure text is in front of the image */
+                color: #303030;
+            }
+        /* Positioning the images at different locations */
+        .image5 {
+            width: 341px;
+            height: auto;
+            right: 50px;
+            bottom: 55px;
+        }
+
+        .image6 {
+            width: 97px;
+            height: auto;
+            Right: -50px;
+            Bottom: -15px;
+            z-index: 2;
+        }
+
+
+        .section4 {            
+            width: 1061px;
+            height: 268px;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 20px;            
+            text-align: left, center;
+            position: relative; /* This is necessary for relative positioning of the images inside it */            
+            display: flex;
+            justify-content: space-between; /* Distribute space between the texts */
+            align-items: center; /* Vertically align items */
+            flex-wrap: wrap; /* Allow wrapping if the screen is too small */
+        }
+
+        .text1 {
+            flex: 9; /* Allow both text sections to take equal width */
+            padding-left: 30px;          
+            width: 505px;
+        }
+        .text2 {
+            flex: 10; /* Allow both text sections to take equal width */
+            padding-left: 30px;
+        }
+            .section4 img {
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: cover;
+                opacity: 1;
+                position: absolute;
+                overflow: hidden;
+            }
+
+            .section4 h1 {
+                font-family: Liberty, sans-serif;
+                font-size: 20px;
+                line-height: 26px;
+                padding-top: 30px;
+                padding-left: 180px;
+                padding-right: 180px; 
+                text-align: center;              
+            }
+
+        .image1 p {
+            font-family: Liberty, sans-serif;
+            font-size: 16px;
+            line-height: 22px;
+            margin-left: 20px;
+            color: #303030;            
+        }
+
+            .image2 p {
+                font-family: Liberty, sans-serif;
+                font-size: 16px;
+                line-height: 22px;                             
+                color: #303030;                
+            }
+        /* Positioning the images at different locations */
+        .image7 {
+            width: 45px;
+            height: auto;
+            left: 0px;
+            bottom: 50px;
+        }
+
+        .image8 {
+            width: 45px;
+            height: auto;
+            left: 490px;
+            bottom: 50px;
+            z-index: 2;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;            
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+            .footer h2 {
+                font-family: Liberty, sans-serif;
+                font-size: 20px;
+                line-height: 26px;
+                color: #0D0D0D;
+                padding-bottom: 15px;
+            }
+
+            .footer p {
+                font-family: LibertyBold, sans-serif;
+                font-size: 16px;
+                line-height: 26px;
+                padding-top: 50px;
+                color: #197C50;               
+            }
+
+        .frame {
+            width: 100%; /* Use viewport width to set the frame size */
+            height: 100%; /* Use viewport height to set the frame size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Hide any overflow */
+            position: relative;
+        }
+
+        .image {
+            max-width: 100%; /* Ensure image width doesn't exceed frame width */
+            max-height: 100%; /* Ensure image height doesn't exceed frame height */
+            object-fit: contain; /* Maintain aspect ratio */
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="frame">
+            <img src="Images\6310241 1.png" alt="Centered Image">
+        </div>
+        <h1>ლიბერთი</h1>        
+        <img style="padding-left: 30px;" src="Images\Group 3.png" alt="Centered Image">        
+        <h2>ძვირფასო მოხმარებელო!</h2>
+        <p> 2024 წლის განმავლობაში შენ ბევრი იმუშავე შენი ბიზნესის წარმატებისთვის,
+            ჩვენ კი - მისი მართვის გამარტივებისთვის. ახლა, როდესაც ახალ წლამდე სულ ცოტა დრო რჩება,
+            გვინდა ერთად გადავხედოთ  ყველა იმ სიახლეს,
+            რომელიც ჩვენმა გუნდმა გასული წლის განმავლობაში შემოგთავაზა.
+         <p>
+</div>
+    <div class="main-content">
+        <div class="section1">
+            <h2>ბიზნეს მობაილ ბანკი</h2>
+            <p>ჩვენი ახალი ბიზნეს მობაილ ბანკი საშუალებას გაძლევს გაიმარტივო ყოველდღიური საქმიანობა, შეასრულო საბანკო ოპერაციები დისტანციურად და დაზოგო დრო - აკეთო ის, რასაც უნდა აკეთებდე.</p>
+            <img class="image1" src="Images\Group 9128.png">
+            <img class="image2" src="Images\image 11 (1).png">
+        </div>
+
+        <div class="section2">
+            <h2>ბიზნეს ბარათის და ახალი ანგარიშის გახსნა</h2>
+            <p>ბიზნეს ბარათის შეკვეთა და ახალი მიმდინარე ანგარიშის გახსნა უკვე დისტანციურად, ჩვენი ციფრული ბანკინგის გამოყენებით შეგიძლია.</p>
+            <img class="image3" src="Images\ანგარიშის გახსნსა - 1@3x 2.png">
+            <img class="image4" src="Images\ანგარიშის გახსნსა - 1@3x 1.png">
+        </div>
+
+        <div class="section3">
+            <h2>ეკვივალენტით გადარიცხვა</h2>
+            <p>თუ გჭირდება გადარიცხო კონკრეტული ოდენობის უცხოური ვალუტის ეკვივალენტი ლარში, ამას უკვე ძალიან მარტივად გააკეთებ როგორც ჩვენი ბიზნეს მობაილ ბანკის, ასევე ბიზნეს ინტერნეტ ბანკის გამოყენებით.</p>
+            <img class="image5" src="Images\რუბლის გადარიცხვა რუსეთის გარეთ - 5 copy 2.png">
+            <img class="image6" src="Images\Group 9130.png">
+        </div>
+        <div class="section4">
+            <h1>გარდა ამისა, მუდმივად შეგიძლია ისარგებლო ჩვენს ციფრულ ბანკში ისეთი მომსახურებებით როგორებიცაა:</h1>
+            <div class="text1">
+                <p><span style="font-family:LibertyBold">მოლაპარაკება დილერთან</span> - შეათანხმე ვალუტის კონვერტაციის ყველაზე მომგებიანი კურსი დილერთან ჩვენს მობაილ და ინტერნეტ ბანკში.</p>
+                <img class="image8" src="Images\image 37.png">
+            </div>
+            <div class="text2">                
+                <img class="image7" src="Images\image 36.png">
+                <p> <span style="font-family: LibertyBold;">სახელფასო პროექტი</span> - გადარიცხე ხელფასები მარტივად ინტერნეტ ბანკიდან და დაადასტურე ოპერაციები როგორც ინტერნეტ, ასევე მობაილ ბანკიდან.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <h2>გილოცავთ დამდეგ, 2025 წელს!</h2>
+        <img src="Images\Group 9122.png">
+        <p>ლიბერთის ციფრული ბანკინგის გუნდი</p>
+    </div>
+</body>
+</html>
